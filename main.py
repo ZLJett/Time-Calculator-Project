@@ -1,5 +1,8 @@
 # put help statment here
 
+# import for testing
+import unittest
+
 def add_time(start, duration, start_day=None):
   # break up start input and store starting am/pm
   split_start_input = start.split() 
@@ -99,7 +102,6 @@ def add_time(start, duration, start_day=None):
 
 
 if __name__ == "__main__":
-  test_items = [("3:00 PM", "3:10"), ("11:30 AM", "2:32", "Monday"), ("11:43 AM", "00:20"), ("10:10 PM", "3:30"), ("11:43 PM", "24:20", "tueSday"), ("6:30 PM", "205:12")]
-  for test_input in test_items:
-    print(add_time(*test_input))
+  print(add_time("11:06 PM", "2:02"))
+  unittest.main(module='test_module', exit=False)
   
